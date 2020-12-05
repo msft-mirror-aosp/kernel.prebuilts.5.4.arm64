@@ -399,18 +399,7 @@
   unregister_virtio_driver
   up_read
   up_write
-  usb_add_hcd
-  usb_create_shared_hcd
   usb_disabled
-  usb_hcd_check_unlink_urb
-  usb_hcd_giveback_urb
-  usb_hcd_is_primary_hcd
-  usb_hcd_link_urb_to_ep
-  usb_hcd_poll_rh_status
-  usb_hcd_resume_root_hub
-  usb_hcd_unlink_urb_from_ep
-  usb_put_hcd
-  usb_remove_hcd
   usleep_range
   vfree
   virtio_check_driver_offered_feature
@@ -449,23 +438,6 @@
   cpufreq_generic_attr
   cpufreq_register_driver
   cpufreq_unregister_driver
-
-# required by dummy_hcd.ko
-  device_create_file
-  device_remove_file
-  ktime_get_ts64
-  platform_device_add_data
-  sg_miter_next
-  sg_miter_start
-  sg_miter_stop
-  usb_add_gadget_udc
-  usb_create_hcd
-  usb_del_gadget_udc
-  usb_ep_set_maxpacket_limit
-  usb_gadget_giveback_request
-  usb_gadget_udc_reset
-  usb_get_dev
-  usb_put_dev
 
 # required by failover.ko
   netdev_master_upper_dev_link
@@ -1081,60 +1053,6 @@
   vsock_core_unregister
   vsock_for_each_connected_socket
 
-# required by xhci-hcd.ko
-  bpf_trace_run1
-  bpf_trace_run3
-  cancel_delayed_work
-  complete_all
-  debugfs_create_regset32
-  dev_driver_string
-  dma_direct_map_page
-  dma_direct_unmap_page
-  dma_pool_alloc
-  dma_pool_create
-  dma_pool_destroy
-  dma_pool_free
-  mod_delayed_work_on
-  param_ops_ullong
-  platform_device_add_properties
-  platform_device_add_resources
-  radix_tree_delete
-  radix_tree_insert
-  radix_tree_lookup
-  radix_tree_maybe_preload
-  ___ratelimit
-  sg_pcopy_from_buffer
-  sg_pcopy_to_buffer
-  __sw_hweight32
-  trace_print_symbols_seq
-  usb_amd_dev_put
-  usb_amd_pt_check_port
-  usb_amd_quirk_pll_disable
-  usb_amd_quirk_pll_enable
-  usb_asmedia_modifyflowcontrol
-  usb_debug_root
-  usb_disable_xhci_ports
-  usb_hcd_end_port_resume
-  usb_hc_died
-  usb_hcd_irq
-  usb_hcd_map_urb_for_dma
-  usb_hcd_start_port_resume
-  usb_hub_clear_tt_buffer
-  usb_root_hub_lost_power
-  usb_wakeup_notification
-  vsnprintf
-
-# required by xhci-pci.ko
-  pci_d3cold_disable
-  pci_set_mwi
-  pci_set_power_state
-  usb_amd_quirk_pll_check
-  usb_enable_intel_xhci_ports
-  usb_hcd_pci_pm_ops
-  usb_hcd_pci_probe
-  usb_hcd_pci_remove
-  usb_hcd_pci_shutdown
-
 # required by zram.ko
   __alloc_percpu
   bdget_disk
@@ -1192,13 +1110,8 @@
   blocking_notifier_call_chain
   blocking_notifier_chain_register
   blocking_notifier_chain_unregister
-  bpf_trace_run1
-  bpf_trace_run2
-  bpf_trace_run3
-  bpf_trace_run4
   bus_register
   bus_unregister
-  cancel_delayed_work
   cancel_delayed_work_sync
   cancel_work_sync
   capable
@@ -1228,23 +1141,20 @@
   cmd_db_read_aux_data
   complete
   complete_all
+  completion_done
   __const_udelay
   consume_skb
   _copy_from_iter_full
   cpu_hwcap_keys
   cpu_hwcaps
-  cpu_number
-  __cpu_online_mask
   crc32_le
   debugfs_create_dir
   debugfs_create_file
-  debugfs_create_regset32
   debugfs_create_u32
   debugfs_create_x32
   debugfs_remove_recursive
   default_llseek
   delayed_work_timer_fn
-  del_timer
   del_timer_sync
   destroy_workqueue
   dev_driver_string
@@ -1252,19 +1162,16 @@
   dev_get_regmap
   device_for_each_child
   device_init_wakeup
-  device_property_present
   device_property_read_u32_array
   device_register
   device_set_wakeup_capable
   device_unregister
-  device_wakeup_enable
   _dev_info
   __dev_kfree_skb_any
   devm_add_action
   devm_clk_bulk_get
   devm_clk_bulk_get_all
   devm_clk_get
-  devm_clk_get_optional
   devm_clk_hw_register
   devm_gpiod_get
   devm_gpiod_get_optional
@@ -1280,17 +1187,14 @@
   __devm_of_phy_provider_register
   devm_of_platform_populate
   devm_phy_create
-  devm_phy_get
   devm_pinctrl_register
   __devm_regmap_init_mmio_clk
   devm_regulator_bulk_get
   devm_regulator_get
   devm_regulator_register
   devm_request_threaded_irq
-  devm_reset_control_array_get
   __devm_reset_control_get
   devm_reset_controller_register
-  devm_usb_get_phy_by_phandle
   devm_watchdog_register_device
   _dev_notice
   dev_pm_domain_attach_by_name
@@ -1301,7 +1205,6 @@
   dev_set_name
   _dev_warn
   disable_irq
-  disable_irq_nosync
   divider_get_val
   divider_recalc_rate
   divider_round_rate_parent
@@ -1313,10 +1216,6 @@
   dma_direct_unmap_sg
   dma_free_attrs
   dmam_alloc_attrs
-  dma_pool_alloc
-  dma_pool_create
-  dma_pool_destroy
-  dma_pool_free
   dma_release_channel
   dma_request_chan
   dma_set_coherent_mask
@@ -1339,11 +1238,6 @@
   drm_mode_vrefresh
   enable_irq
   eth_validate_addr
-  event_triggers_call
-  extcon_get_edev_by_phandle
-  extcon_get_state
-  extcon_register_notifier
-  extcon_unregister_notifier
   fd_install
   find_next_bit
   find_next_zero_bit
@@ -1448,20 +1342,17 @@
   netdev_warn
   netif_napi_add
   netif_napi_del
-  no_llseek
   nvmem_cell_read
   of_address_to_resource
   of_alias_get_id
   of_clk_add_hw_provider
   of_clk_del_provider
-  of_clk_get
   of_clk_hw_onecell_get
   of_clk_hw_simple_get
   of_clk_set_defaults
   of_device_get_match_data
   of_device_is_compatible
   of_device_uevent_modalias
-  of_find_device_by_node
   of_find_property
   of_fwnode_ops
   of_genpd_add_provider_onecell
@@ -1487,33 +1378,15 @@
   of_property_read_variable_u8_array
   of_reserved_mem_lookup
   param_ops_bool
-  param_ops_int
   param_ops_uint
-  pci_bus_type
-  pci_dev_put
-  pci_read_config_byte
-  pci_read_config_dword
   __pci_register_driver
   pci_unregister_driver
-  pci_write_config_dword
-  perf_trace_buf_alloc
-  perf_trace_run_bpf_submit
-  phy_exit
-  phy_init
-  phy_power_off
-  phy_power_on
-  phy_set_mode_ext
   pinconf_generic_dt_node_to_map
   pinctrl_dev_get_drvdata
   pinctrl_pm_select_default_state
   pinctrl_pm_select_sleep_state
   pinctrl_utils_free_map
   platform_bus_type
-  platform_device_add
-  platform_device_add_properties
-  platform_device_add_resources
-  platform_device_alloc
-  platform_device_put
   platform_device_register_full
   platform_device_unregister
   __platform_driver_register
@@ -1523,7 +1396,6 @@
   platform_get_resource
   platform_get_resource_byname
   pm_genpd_init
-  pm_runtime_allow
   __pm_runtime_disable
   pm_runtime_enable
   pm_runtime_forbid
@@ -1535,8 +1407,6 @@
   __pm_runtime_set_status
   __pm_runtime_suspend
   __pm_runtime_use_autosuspend
-  preempt_schedule
-  preempt_schedule_notrace
   prepare_to_wait_event
   printk
   pskb_expand_head
@@ -1546,17 +1416,12 @@
   qcom_smem_state_unregister
   queue_delayed_work_on
   queue_work_on
-  radix_tree_delete
-  radix_tree_insert
-  radix_tree_lookup
   ___ratelimit
   _raw_spin_lock
   _raw_spin_lock_bh
-  _raw_spin_lock_irq
   _raw_spin_lock_irqsave
   _raw_spin_unlock
   _raw_spin_unlock_bh
-  _raw_spin_unlock_irq
   _raw_spin_unlock_irqrestore
   __rcu_read_lock
   __rcu_read_unlock
@@ -1596,7 +1461,6 @@
   rproc_remove_subdev
   schedule
   schedule_timeout
-  schedule_timeout_uninterruptible
   scnprintf
   seq_lseek
   seq_printf
@@ -1605,8 +1469,6 @@
   sg_free_table
   sg_init_table
   sg_next
-  simple_attr_open
-  simple_attr_release
   simple_read_from_buffer
   single_open
   single_release
@@ -1627,7 +1489,6 @@
   strcpy
   strlcpy
   strlen
-  strncmp
   strncpy
   __sw_hweight32
   __sw_hweight64
@@ -1636,15 +1497,6 @@
   syscon_regmap_lookup_by_phandle
   system_wq
   thermal_cooling_device_unregister
-  trace_define_field
-  trace_event_buffer_commit
-  trace_event_buffer_reserve
-  trace_event_ignore_this_pid
-  trace_event_raw_init
-  trace_event_reg
-  trace_handle_return
-  trace_raw_output_prep
-  trace_seq_printf
   tty_flip_buffer_push
   __tty_insert_flip_char
   uart_add_one_port
@@ -1659,28 +1511,8 @@
   __udelay
   unregister_reboot_notifier
   unregister_rpmsg_driver
-  usb_add_hcd
-  usb_amd_dev_put
-  usb_amd_quirk_pll_check
-  usb_amd_quirk_pll_disable
-  usb_amd_quirk_pll_enable
-  usb_debug_root
   usb_deregister
   usb_disabled
-  usb_get_dr_mode
-  usb_hcd_check_unlink_urb
-  usb_hcd_giveback_urb
-  usb_hc_died
-  usb_hcd_is_primary_hcd
-  usb_hcd_link_urb_to_ep
-  usb_hcd_pci_pm_ops
-  usb_hcd_pci_probe
-  usb_hcd_pci_remove
-  usb_hcd_pci_shutdown
-  usb_hcd_platform_shutdown
-  usb_hcd_poll_rh_status
-  usb_hcd_resume_root_hub
-  usb_hcd_unlink_urb_from_ep
   usbnet_disconnect
   usbnet_get_endpoints
   usbnet_get_msglevel
@@ -1702,12 +1534,8 @@
   usbnet_write_cmd
   usbnet_write_cmd_async
   usbnet_write_cmd_nopm
-  usb_put_hcd
   usb_register_driver
-  usb_remove_hcd
-  usb_root_hub_lost_power
   usleep_range
-  vsnprintf
   wait_for_completion_timeout
   __wake_up
   __warn_printk
@@ -1743,6 +1571,8 @@
   iommu_group_remove_device
   iommu_put_dma_cookie
   of_dma_is_coherent
+  param_ops_int
+  pci_bus_type
   pci_device_group
 
 # required by asix.ko
@@ -1779,12 +1609,12 @@
   wiphy_apply_custom_regulatory
 
 # required by ath10k_core.ko
+  cancel_delayed_work
   cfg80211_calculate_bitrate
   cfg80211_find_elem_match
   cfg80211_find_vendor_elem
   cfg80211_get_bss
   cfg80211_put_bss
-  completion_done
   device_get_mac_address
   device_set_wakeup_enable
   firmware_request_nowarn
@@ -1865,9 +1695,11 @@
   pci_enable_device
   pci_enable_msi
   pci_iomap
+  pci_read_config_dword
   pci_release_region
   pci_request_region
   pci_set_master
+  pci_write_config_dword
 
 # required by ath10k_snoc.ko
   devm_regulator_get_optional
@@ -1906,36 +1738,6 @@
 # required by cqhci.ko
   dmam_free_coherent
   mmc_cqe_request_done
-
-# required by dwc3-qcom.ko
-  devm_extcon_register_notifier
-  of_clk_get_parent_count
-
-# required by dwc3.ko
-  dev_fwnode
-  device_property_read_string
-  device_property_read_u8_array
-  devm_usb_get_phy
-  extcon_find_edev_by_node
-  extcon_get_extcon_dev
-  kstrtouint
-  of_usb_get_phy_mode
-  phy_pm_runtime_get_sync
-  phy_pm_runtime_put_sync
-  platform_get_irq_byname_optional
-  system_freezable_wq
-  usb_add_gadget_udc
-  usb_decode_ctrl
-  usb_del_gadget_udc
-  usb_ep_set_maxpacket_limit
-  usb_gadget_giveback_request
-  usb_gadget_map_request_by_dev
-  usb_gadget_set_state
-  usb_gadget_udc_reset
-  usb_gadget_unmap_request_by_dev
-  usb_get_maximum_speed
-  usb_role_switch_register
-  usb_role_switch_unregister
 
 # required by extcon-usb-gpio.ko
   devm_extcon_dev_allocate
@@ -2018,6 +1820,7 @@
   pagecache_get_page
   path_get
   path_put
+  preempt_schedule
   __put_cred
   __put_page
   register_filesystem
@@ -2068,6 +1871,10 @@
 # required by msm.ko
   __bitmap_andnot
   __bitmap_weight
+  bpf_trace_run1
+  bpf_trace_run2
+  bpf_trace_run3
+  bpf_trace_run4
   bpf_trace_run5
   bpf_trace_run6
   bpf_trace_run8
@@ -2086,9 +1893,12 @@
   component_master_add_with_match
   component_master_del
   component_unbind_all
+  cpu_number
+  __cpu_online_mask
   _ctype
   debugfs_create_bool
   debugfs_create_u64
+  del_timer
   devfreq_recommended_opp
   devfreq_resume_device
   devfreq_suspend_device
@@ -2279,6 +2089,7 @@
   drm_state_dump
   drm_universal_plane_init
   drm_vblank_init
+  event_triggers_call
   get_pid_task
   gpiod_direction_input
   gpiod_direction_output
@@ -2321,6 +2132,7 @@
   mipi_dsi_host_unregister
   mipi_dsi_packet_format_is_long
   mutex_trylock_recursive
+  no_llseek
   nsecs_to_jiffies
   ns_to_timespec
   nvmem_cell_get
@@ -2329,6 +2141,7 @@
   of_dma_configure
   of_drm_find_bridge
   of_drm_find_panel
+  of_find_device_by_node
   of_find_matching_node_and_match
   of_get_compatible_child
   of_graph_get_endpoint_by_regs
@@ -2337,8 +2150,11 @@
   of_graph_parse_endpoint
   of_icc_get
   param_ops_charp
+  perf_trace_buf_alloc
+  perf_trace_run_bpf_submit
   pid_task
   pm_runtime_get_if_in_use
+  preempt_schedule_notrace
   put_pid
   put_unused_fd
   _raw_read_lock
@@ -2355,7 +2171,9 @@
   sched_setscheduler
   schedule_timeout_interruptible
   shmem_truncate_range
+  simple_attr_open
   simple_attr_read
+  simple_attr_release
   simple_attr_write
   simple_open
   sscanf
@@ -2363,6 +2181,15 @@
   sync_file_create
   sync_file_get_fence
   timespec64_to_jiffies
+  trace_define_field
+  trace_event_buffer_commit
+  trace_event_buffer_reserve
+  trace_event_ignore_this_pid
+  trace_event_raw_init
+  trace_event_reg
+  trace_handle_return
+  trace_raw_output_prep
+  trace_seq_printf
   unmap_mapping_range
   unregister_shrinker
   unregister_vmap_purge_notifier
@@ -2371,6 +2198,7 @@
   vmf_insert_mixed
   vm_get_page_prot
   vscnprintf
+  vsnprintf
   vunmap
   wake_up_process
   ww_mutex_lock_interruptible
@@ -2388,28 +2216,67 @@
 
 # required by ohci-hcd.ko
   debugfs_remove
+  dma_pool_alloc
+  dma_pool_create
+  dma_pool_destroy
+  dma_pool_free
   flush_work
   gen_pool_dma_alloc_align
   gen_pool_dma_zalloc_align
   gen_pool_free_owner
+  _raw_spin_lock_irq
+  _raw_spin_unlock_irq
   sb800_prefetch
+  schedule_timeout_uninterruptible
+  usb_amd_dev_put
+  usb_amd_quirk_pll_disable
+  usb_amd_quirk_pll_enable
   usb_calc_bus_time
+  usb_debug_root
+  usb_hcd_check_unlink_urb
+  usb_hcd_giveback_urb
+  usb_hc_died
+  usb_hcd_link_urb_to_ep
+  usb_hcd_poll_rh_status
+  usb_hcd_resume_root_hub
   usb_hcds_loaded
+  usb_hcd_unlink_urb_from_ep
+  usb_root_hub_lost_power
 
 # required by ohci-pci.ko
+  pci_dev_put
   pci_get_slot
   pci_match_id
   usb_amd_prefetch_quirk
+  usb_amd_quirk_pll_check
+  usb_hcd_pci_pm_ops
+  usb_hcd_pci_probe
+  usb_hcd_pci_remove
+  usb_hcd_pci_shutdown
 
 # required by ohci-platform.ko
+  device_wakeup_enable
+  devm_reset_control_array_get
+  of_clk_get
+  usb_add_hcd
   usb_create_hcd
+  usb_hcd_platform_shutdown
+  usb_put_hcd
+  usb_remove_hcd
 
 # required by phy-qcom-qmp.ko
   of_clk_get_by_name
   __of_reset_control_get
 
 # required by phy-qcom-qusb2.ko
+  devm_clk_get_optional
   devm_nvmem_cell_get
+
+# required by phy-qcom-usb-hs.ko
+  extcon_get_edev_by_phandle
+  extcon_get_state
+  extcon_register_notifier
+  extcon_unregister_notifier
 
 # required by pinctrl-sdm845.ko
   msm_pinctrl_dev_pm_ops
@@ -2570,6 +2437,9 @@
   __nla_parse
   proto_register
   proto_unregister
+  radix_tree_delete
+  radix_tree_insert
+  radix_tree_lookup
   _raw_write_lock_bh
   _raw_write_unlock_bh
   refcount_dec_and_mutex_lock
@@ -2608,6 +2478,7 @@
   devres_release
   kfree_const
   kstrdup_const
+  strncmp
 
 # required by regmap-spmi.ko
   __devm_regmap_init
@@ -2689,6 +2560,12 @@
   spmi_controller_remove
 
 # required by ufs_qcom.ko
+  devm_phy_get
+  phy_exit
+  phy_init
+  phy_power_off
+  phy_power_on
+  phy_set_mode_ext
   ufshcd_dme_get_attr
   ufshcd_dme_set_attr
   ufshcd_dump_regs
@@ -2709,49 +2586,6 @@
   of_device_modalias
   of_device_request_module
   __request_module
-
-# required by xhci-hcd.ko
-  add_timer
-  mod_delayed_work_on
-  __num_online_cpus
-  param_ops_ullong
-  pci_alloc_irq_vectors_affinity
-  pci_free_irq_vectors
-  pci_irq_vector
-  radix_tree_maybe_preload
-  sg_pcopy_from_buffer
-  sg_pcopy_to_buffer
-  trace_print_symbols_seq
-  usb_amd_pt_check_port
-  usb_asmedia_modifyflowcontrol
-  usb_disable_xhci_ports
-  usb_hcd_end_port_resume
-  usb_hcd_irq
-  usb_hcd_map_urb_for_dma
-  usb_hcd_start_port_resume
-  usb_hub_clear_tt_buffer
-  usb_wakeup_notification
-  wait_for_completion
-
-# required by xhci-pci-renesas.ko
-  debugfs_attr_read
-  debugfs_attr_write
-  device_release_driver
-  pci_dev_get
-  pci_read_config_word
-  pci_write_config_byte
-  request_firmware_nowait
-
-# required by xhci-pci.ko
-  pci_d3cold_disable
-  pci_set_mwi
-  pci_set_power_state
-  usb_create_shared_hcd
-  usb_enable_intel_xhci_ports
-
-# required by xhci-plat-hcd.ko
-  of_usb_host_tpl_support
-  __usb_create_hcd
 
 [abi_symbol_list]
 # commonly used symbols
@@ -3093,35 +2927,6 @@
   cpufreq_generic_attr
   cpufreq_register_driver
   cpufreq_unregister_driver
-
-# required by dummy_hcd.ko
-  device_create_file
-  device_remove_file
-  platform_device_add_data
-  sg_miter_next
-  sg_miter_start
-  sg_miter_stop
-  strstr
-  usb_add_gadget_udc
-  usb_add_hcd
-  usb_create_hcd
-  usb_create_shared_hcd
-  usb_del_gadget_udc
-  usb_disabled
-  usb_ep_set_maxpacket_limit
-  usb_gadget_giveback_request
-  usb_gadget_udc_reset
-  usb_get_dev
-  usb_hcd_check_unlink_urb
-  usb_hcd_giveback_urb
-  usb_hcd_is_primary_hcd
-  usb_hcd_link_urb_to_ep
-  usb_hcd_poll_rh_status
-  usb_hcd_resume_root_hub
-  usb_hcd_unlink_urb_from_ep
-  usb_put_dev
-  usb_put_hcd
-  usb_remove_hcd
 
 # required by erofs.ko
   add_to_page_cache_lru
@@ -4358,36 +4163,16 @@
   unregister_filesystem
   up_read
   up_write
-  usb_add_hcd
   usb_amd_dev_put
   usb_amd_quirk_pll_check
   usb_amd_quirk_pll_disable
   usb_amd_quirk_pll_enable
   usb_calc_bus_time
-  usb_create_hcd
   usb_debug_root
   usb_disabled
   usb_gadget_set_state
   usb_get_dr_mode
-  usb_hcd_check_unlink_urb
-  usb_hcd_end_port_resume
-  usb_hcd_giveback_urb
-  usb_hc_died
-  usb_hcd_is_primary_hcd
-  usb_hcd_link_urb_to_ep
-  usb_hcd_pci_pm_ops
-  usb_hcd_pci_probe
-  usb_hcd_pci_remove
-  usb_hcd_pci_shutdown
-  usb_hcd_platform_shutdown
-  usb_hcd_poll_rh_status
-  usb_hcd_resume_root_hub
-  usb_hcds_loaded
-  usb_hcd_start_port_resume
-  usb_hcd_unlink_urb_from_ep
   usb_hub_clear_tt_buffer
-  usb_put_hcd
-  usb_remove_hcd
   usb_role_switch_register
   usb_role_switch_unregister
   usb_root_hub_lost_power
@@ -5302,34 +5087,6 @@
   sdio_set_host_pm_flags
   sdio_unregister_driver
   sdio_writesb
-
-# required by xhci-hcd.ko
-  add_timer
-  devm_add_action
-  __num_online_cpus
-  param_ops_ullong
-  radix_tree_insert
-  radix_tree_lookup
-  radix_tree_maybe_preload
-  usb_amd_pt_check_port
-  usb_asmedia_modifyflowcontrol
-  usb_disable_xhci_ports
-  usb_hcd_irq
-  usb_hcd_map_urb_for_dma
-  usb_wakeup_notification
-  vsnprintf
-
-# required by xhci-pci.ko
-  pci_d3cold_disable
-  pci_set_power_state
-  usb_create_shared_hcd
-  usb_enable_intel_xhci_ports
-
-# required by xhci-plat-hcd.ko
-  of_fwnode_ops
-  of_usb_host_tpl_support
-  pci_bus_type
-  __usb_create_hcd
 
 [abi_symbol_list]
   add_device_randomness
@@ -7553,7 +7310,6 @@
   up_read
   up_write
   usb_add_gadget_udc
-  usb_add_hcd
   usb_add_phy_dev
   usb_alloc_coherent
   usb_alloc_dev
@@ -7573,9 +7329,6 @@
   usb_clear_halt
   usb_composite_setup_continue
   usb_control_msg
-  __usb_create_hcd
-  usb_create_hcd
-  usb_create_shared_hcd
   usb_debug_root
   usb_decode_ctrl
   usb_del_gadget_udc
@@ -7620,24 +7373,6 @@
   usb_get_maximum_speed
   usb_get_urb
   usb_gstrings_attach
-  usb_hcd_check_unlink_urb
-  usb_hcd_end_port_resume
-  usb_hcd_giveback_urb
-  usb_hc_died
-  usb_hcd_irq
-  usb_hcd_is_primary_hcd
-  usb_hcd_link_urb_to_ep
-  usb_hcd_map_urb_for_dma
-  usb_hcd_pci_pm_ops
-  usb_hcd_pci_probe
-  usb_hcd_pci_remove
-  usb_hcd_pci_shutdown
-  usb_hcd_poll_rh_status
-  usb_hcd_resume_root_hub
-  usb_hcd_start_port_resume
-  usb_hcd_unlink_urb_from_ep
-  usb_hub_clear_tt_buffer
-  usb_hub_find_child
   usb_ifnum_to_if
   usb_interface_id
   usb_kill_urb
@@ -7647,11 +7382,9 @@
   usb_poison_urb
   usb_put_dev
   usb_put_function_instance
-  usb_put_hcd
   usb_put_intf
   usb_register_driver
   usb_register_notify
-  usb_remove_hcd
   usb_remove_phy
   usb_reset_device
   usb_reset_endpoint
@@ -8008,15 +7741,6 @@
   handle_bad_irq
   handle_edge_irq
   handle_level_irq
-  hid_compare_device_paths
-  hid_debug
-  hid_field_extract
-  hid_hw_close
-  hid_hw_open
-  hid_hw_stop
-  hid_input_report
-  hid_report_raw_event
-  __hid_request
   i2c_del_driver
   i2c_register_driver
   i2c_smbus_read_byte_data
@@ -8446,8 +8170,6 @@
   usb_gadget_udc_reset
   usb_get_dr_mode
   usb_get_intf
-  usb_hcd_is_primary_hcd
-  usb_hid_driver
   usb_interface_id
   usb_kill_urb
   usb_phy_get_charger_current
@@ -8660,55 +8382,6 @@
 
 # required by gpio-sprd.ko
   __platform_driver_probe
-
-# required by hid-generic.ko
-  bus_for_each_drv
-  hid_bus_type
-  hid_hw_start
-  hid_match_device
-  hid_open_report
-  __hid_register_driver
-  hid_unregister_driver
-
-# required by hid-logitech-dj.ko
-  hid_add_device
-  hid_allocate_device
-  hid_destroy_device
-  hid_parse_report
-  strlcat
-
-# required by hid-logitech-hidpp.ko
-  hid_snto32
-  input_ff_create
-  strnstr
-
-# required by hid-picolcd.ko
-  hid_set_field
-
-# required by hid-prodikeys.ko
-  snd_card_disconnect
-  snd_card_free_when_closed
-  snd_card_new
-  snd_card_register
-  snd_device_new
-  snd_rawmidi_new
-  snd_rawmidi_receive
-  snd_rawmidi_set_ops
-
-# required by hid-roccat.ko
-  noop_llseek
-
-# required by hid-roccat-lua.ko
-  sysfs_create_bin_file
-  sysfs_remove_bin_file
-
-# required by hid-uclogic.ko
-  usb_string
-
-# required by hid-wiimote.ko
-  kasprintf
-  led_classdev_register_ext
-  led_classdev_unregister
 
 # required by i2c-sprd.ko
   i2c_add_numbered_adapter
@@ -9764,63 +9437,10 @@
   sg_init_one
   sg_nents_for_len
 
-# required by wacom.ko
-  devm_led_trigger_register
-  devres_close_group
-  devres_open_group
-  devres_release_group
-  hid_alloc_report_buf
-  hidinput_calc_abs_res
-  int_sqrt
-  __kfifo_in_r
-  __kfifo_max_r
-  __kfifo_out_r
-  __kfifo_skip_r
-  led_trigger_event
-  memmove
-  sysfs_create_files
-
 # required by wcn_bsp.ko
   memdup_user
   register_chrdev_region
   request_firmware_direct
-
-# required by xhci-hcd.ko
-  dma_pool_alloc
-  dma_pool_create
-  dma_pool_destroy
-  dma_pool_free
-  __num_online_cpus
-  param_ops_ullong
-  pci_alloc_irq_vectors_affinity
-  pci_free_irq_vectors
-  pci_irq_vector
-  radix_tree_delete
-  radix_tree_insert
-  radix_tree_lookup
-  radix_tree_maybe_preload
-  sg_pcopy_from_buffer
-  sg_pcopy_to_buffer
-  usb_amd_dev_put
-  usb_amd_pt_check_port
-  usb_amd_quirk_pll_disable
-  usb_amd_quirk_pll_enable
-  usb_asmedia_modifyflowcontrol
-  usb_disable_xhci_ports
-  usb_hcd_end_port_resume
-  usb_hc_died
-  usb_hcd_irq
-  usb_hcd_start_port_resume
-  usb_hub_clear_tt_buffer
-  usb_root_hub_lost_power
-  usb_wakeup_notification
-
-# required by xhci-plat-hcd.ko
-  devm_clk_get_optional
-  of_usb_host_tpl_support
-  pci_bus_type
-  __usb_create_hcd
-  usb_hcd_platform_shutdown
 
 [abi_symbol_list]
   add_timer
