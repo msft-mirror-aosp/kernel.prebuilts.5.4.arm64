@@ -2,6 +2,7 @@
 # commonly used symbols
   module_layout
   __put_task_struct
+  __ubsan_handle_cfi_check_fail_abort
 
 # required by erofs.ko
   add_to_page_cache_lru
@@ -498,8 +499,6 @@
   inode_init_once
   inode_init_owner
   iterate_dir
-  kernel_read
-  kernel_write
   kern_path
   kobject_create_and_add
   kobject_put
@@ -526,17 +525,6 @@
   unlock_new_inode
   unlock_rename
   user_path_at_empty
-  vfs_create
-  vfs_fallocate
-  vfs_getattr
-  vfs_getxattr
-  vfs_link
-  vfs_listxattr
-  vfs_mkdir
-  vfs_rename
-  vfs_rmdir
-  vfs_setxattr
-  vfs_unlink
 
 # required by lzo-rle.ko
   lzorle1x_1_compress
@@ -1804,8 +1792,6 @@
   inode_init_owner
   iput
   iterate_dir
-  kernel_read
-  kernel_write
   kern_path
   kobject_create_and_add
   kobject_put
@@ -1841,17 +1827,6 @@
   unregister_filesystem
   up_write
   user_path_at_empty
-  vfs_create
-  vfs_fallocate
-  vfs_getattr
-  vfs_getxattr
-  vfs_link
-  vfs_listxattr
-  vfs_mkdir
-  vfs_rename
-  vfs_rmdir
-  vfs_setxattr
-  vfs_unlink
 
 # required by lt9611.ko
   __devm_regmap_init_i2c
@@ -3031,8 +3006,6 @@
   ihold
   inode_init_owner
   iterate_dir
-  kernel_read
-  kernel_write
   kern_path
   ktime_get
   lockref_get
@@ -3054,17 +3027,6 @@
   truncate_inode_pages
   unlock_rename
   user_path_at_empty
-  vfs_create
-  vfs_fallocate
-  vfs_getattr
-  vfs_getxattr
-  vfs_link
-  vfs_listxattr
-  vfs_mkdir
-  vfs_rename
-  vfs_rmdir
-  vfs_setxattr
-  vfs_unlink
 
 # required by mac80211_hwsim.ko
   alloc_netdev_mqs
@@ -3864,7 +3826,6 @@
   extcon_get_edev_by_phandle
   extcon_get_state
   fd_install
-  filp_open
   find_next_bit
   find_next_zero_bit
   finish_wait
@@ -4179,8 +4140,6 @@
   __usecs_to_jiffies
   usleep_range
   vfree
-  vfs_fallocate
-  vfs_getattr
   vmalloc
   vmemmap
   wait_for_completion
@@ -4481,8 +4440,6 @@
   generic_shutdown_super
   ihold
   inode_init_owner
-  kernel_read
-  kernel_write
   kobject_create_and_add
   kobject_put
   lookup_one_len
@@ -4501,15 +4458,6 @@
   sync_filesystem
   unlock_page
   user_path_at_empty
-  vfs_create
-  vfs_getxattr
-  vfs_link
-  vfs_listxattr
-  vfs_mkdir
-  vfs_rename
-  vfs_rmdir
-  vfs_setxattr
-  vfs_unlink
 
 # required by ion_cma_heap.ko
   cma_alloc
@@ -5918,8 +5866,6 @@
   fasync_helper
   fd_install
   file_path
-  filp_close
-  filp_open
   find_last_bit
   find_next_bit
   find_next_zero_bit
@@ -7475,7 +7421,6 @@
   vb2_streamon
   vfree
   vfs_fsync
-  vfs_statx
   video_devdata
   video_device_alloc
   video_device_release
@@ -8813,8 +8758,6 @@
   ktime_get_with_offset
   param_array_ops
   unregister_pm_notifier
-  vfs_getattr
-  vfs_statx
 
 # required by sipa_core.ko
   free_pages
@@ -9972,7 +9915,6 @@
   jiffies_to_usecs
   kasprintf
   kernel_kobj
-  kernel_write
   kern_path
   __kfifo_alloc
   __kfifo_free
