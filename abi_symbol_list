@@ -491,8 +491,6 @@
   reset_control_assert
   reset_control_deassert
   reset_control_reset
-  rpmh_write
-  rpmh_write_async
   rpmsg_register_device
   rpmsg_send
   rpmsg_unregister_device
@@ -1154,7 +1152,6 @@
   unregister_shrinker
   unregister_vmap_purge_notifier
   vmap
-  vmemmap
   vmf_insert_mixed
   vm_get_page_prot
   vscnprintf
@@ -1379,8 +1376,6 @@
   icc_provider_add
   icc_provider_del
   of_icc_xlate_onecell
-  rpmh_invalidate
-  rpmh_write_batch
 
 # required by qrtr-smd.ko
   __pskb_pull_tail
@@ -2004,7 +1999,6 @@
   vfs_fsync
   vmalloc
   vmap
-  vmemmap
   vunmap
   vzalloc
   wait_for_completion
@@ -2424,7 +2418,6 @@
   of_find_device_by_node
   of_get_next_available_child
   of_property_read_u64
-  physvirt_offset
   rb_erase
   rb_first
   rb_insert_color
@@ -4371,7 +4364,6 @@
   phy_power_off
   phy_power_on
   phy_set_mode_ext
-  physvirt_offset
   pinconf_generic_dt_node_to_map
   pinctrl_dev_get_drvdata
   pinctrl_lookup_state
@@ -4625,11 +4617,6 @@
   rfkill_register
   rfkill_unregister
   round_jiffies
-  rpmh_flush
-  rpmh_invalidate
-  rpmh_write
-  rpmh_write_async
-  rpmh_write_batch
   rtc_class_close
   rtc_class_open
   rtc_read_time
@@ -5263,7 +5250,6 @@
   vmalloc_to_page
   vmalloc_user
   vmap
-  vmemmap
   vmf_insert_mixed
   vmf_insert_pfn
   vm_get_page_prot
@@ -5692,7 +5678,6 @@
   perf_trace_buf_alloc
   perf_trace_run_bpf_submit
   pfn_valid
-  physvirt_offset
   pinctrl_lookup_state
   pinctrl_select_state
   platform_bus_type
@@ -5958,7 +5943,6 @@
   vabits_actual
   vfree
   vmalloc
-  vmemmap
   vm_iomap_memory
   vm_map_ram
   vm_unmap_ram
@@ -7966,7 +7950,6 @@
   phy_power_on
   phy_reset
   phy_set_mode_ext
-  physvirt_offset
   pinctrl_add_gpio_range
   pinctrl_dev_get_drvdata
   pinctrl_force_sleep
@@ -8502,7 +8485,6 @@
   vmalloc_to_page
   vmalloc_user
   vmap
-  vmemmap
   vmf_insert_pfn_prot
   vm_get_page_prot
   vm_iomap_memory
@@ -8945,7 +8927,6 @@
   __per_cpu_offset
   perf_trace_buf_alloc
   perf_trace_run_bpf_submit
-  physvirt_offset
   platform_device_unregister
   __platform_driver_register
   platform_driver_unregister
@@ -9106,7 +9087,6 @@
   virtqueue_kick
   virtqueue_kick_prepare
   virtqueue_notify
-  vmemmap
   vring_create_virtqueue
   vring_del_virtqueue
   vring_interrupt
