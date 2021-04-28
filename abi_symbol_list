@@ -5105,6 +5105,7 @@
   bus_register
   bus_set_iommu
   bus_unregister
+  __close_fd
   __ClearPageMovable
   call_rcu
   cancel_delayed_work
@@ -5120,6 +5121,8 @@
   __class_create
   class_destroy
   class_find_device
+  clear_nlink
+  clear_inode
   clk_bulk_disable
   clk_bulk_enable
   clk_bulk_prepare
@@ -5174,6 +5177,7 @@
   __dynamic_netdev_dbg
   d_make_root
   d_splice_alias
+  debugfs_create_bool
   debugfs_create_dir
   debugfs_create_file
   debugfs_create_u32
@@ -5203,6 +5207,7 @@
   device_match_fwnode
   device_match_name
   device_property_present
+  device_property_read_string
   device_property_read_u32_array
   device_register
   device_remove_file
@@ -5215,6 +5220,7 @@
   devm_clk_bulk_get
   devm_clk_bulk_get_all
   devm_clk_get
+  devm_clk_get_optional
   devm_free_irq
   devm_gpiochip_add_data
   devm_gpiod_get
@@ -5261,6 +5267,7 @@
   dma_max_mapping_size
   dma_set_mask
   down
+  dput
   driver_register
   driver_unregister
   drm_atomic_helper_plane_destroy_state
@@ -5370,6 +5377,7 @@
   iget_failed
   iget5_locked
   ignore_console_lock_warning
+  igrab
   inet_proto_csum_replace4
   init_net
   __init_rwsem
@@ -5798,6 +5806,7 @@
   __sw_hweight64
   submit_bio
   sync_filesystem
+  synchronize_irq
   syscon_regmap_lookup_by_phandle
   syscon_regmap_lookup_by_phandle_args
   sysfs_create_bin_file
@@ -6065,6 +6074,8 @@
   mpage_writepages
   __remove_inode_hash
   setattr_copy
+  setattr_prepare
+  sb_min_blocksize
   sb_set_blocksize
   strscpy
   sync_blockdev
@@ -6073,7 +6084,9 @@
   time64_to_tm
   touch_buffer
   trace_print_symbols_seq
+  truncate_inode_pages
   truncate_pagecache
+  truncate_setsize
   unload_nls
   unlock_buffer
   utf16s_to_utf8s
@@ -7571,6 +7584,12 @@
   snd_pcm_rate_bit_to_rate
   snd_soc_bytes_info_ext
   snd_soc_new_compress
+  snd_card_new
+  snd_card_register
+  snd_ctl_add
+  snd_ctl_new1
+  snd_pcm_new
+  snd_pcm_set_ops
 
 # required by ssd20xx_ts.ko
   input_mt_report_pointer_emulation
@@ -7590,6 +7609,20 @@
 # required by sprd_wdf.ko
   kstrtoull_from_user
   smpboot_register_percpu_thread
+
+# required by zram.ko
+	bdgrab
+	bio_chain
+	bio_init
+	blkdev_put
+	blk_status_to_errno
+	blkdev_get
+	filp_close
+	filp_open
+	file_path
+	I_BDEV
+	set_blocksize
+	submit_bio_wait
 
 [abi_symbol_list]
   add_timer
@@ -9087,6 +9120,7 @@
 
 [abi_symbol_list]
 # commonly used symbols
+  alloc_anon_inode
   __alloc_disk_node
   alloc_etherdev_mqs
   __alloc_pages_nodemask
@@ -9123,6 +9157,7 @@
   __check_object_size
   __class_create
   class_destroy
+  __ClearPageMovable
   complete
   __const_udelay
   consume_skb
@@ -9203,6 +9238,7 @@
   idr_alloc
   idr_destroy
   idr_remove
+  init_pseudo
   __init_rwsem
   init_timer_key
   init_wait_entry
@@ -9213,10 +9249,14 @@
   input_register_device
   input_unregister_device
   iounmap
+  iput
   jiffies
   jiffies_to_msecs
+  kern_mount
+  kern_unmount
   kfree
   kfree_skb
+  kill_anon_super
   kimage_vaddr
   kimage_voffset
   __kmalloc
@@ -9366,6 +9406,7 @@
   seq_read
   seq_release
   set_disk_ro
+  __SetPageMovable
   sg_alloc_table
   sg_free_table
   sg_init_one
@@ -9445,6 +9486,7 @@
   unregister_netdev
   unregister_netdevice_notifier
   unregister_netdevice_queue
+  unregister_shrinker
   unregister_virtio_device
   unregister_virtio_driver
   up_read
@@ -10031,6 +10073,19 @@
 # required by virtio-rng.ko
   wait_for_completion_killable
 
+# required by virtio_balloon.ko
+  adjust_managed_page_count
+  all_vm_events
+  balloon_aops
+  balloon_page_alloc
+  balloon_page_dequeue
+  balloon_page_enqueue
+  si_mem_available
+  si_meminfo
+  system_freezable_wq
+  vm_event_states
+  vm_node_stat
+
 # required by virtio_blk.ko
   blk_execute_rq
   blk_get_request
@@ -10233,20 +10288,11 @@
   vzalloc
 
 # required by zsmalloc.ko
-  alloc_anon_inode
-  __ClearPageMovable
   dec_zone_page_state
   inc_zone_page_state
-  init_pseudo
-  iput
-  kern_mount
-  kern_unmount
-  kill_anon_super
   __lock_page
   page_mapping
   _raw_read_lock
   _raw_read_unlock
   _raw_write_lock
   _raw_write_unlock
-  __SetPageMovable
-  unregister_shrinker
