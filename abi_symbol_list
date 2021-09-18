@@ -5062,6 +5062,7 @@
   add_uevent_var
   add_wait_queue
   add_to_page_cache_lru
+  addrconf_prefix_rcv_add_addr
   aes_encrypt
   aes_expandkey
   alloc_anon_inode
@@ -5458,6 +5459,7 @@
   ip_route_output_flow
   ipv4_redirect
   ipv4_update_pmtu
+  ipv6_skip_exthdr
   ir_lirc_scancode_event
   ir_raw_gen_manchester
   ir_raw_gen_pd
@@ -5602,6 +5604,7 @@
   of_property_read_string
   of_property_read_u32_index
   of_property_read_u64
+  of_property_read_u64_index
   of_property_read_variable_u32_array
   of_prop_next_string
   oops_in_progress
@@ -5774,6 +5777,7 @@
   seq_read
   set_nlink
   set_normalized_timespec64
+  set_page_dirty
   set_user_nice
   sg_init_table
   sg_miter_next
@@ -5788,6 +5792,7 @@
   simple_get_link
   simple_read_from_buffer
   simple_strtol
+  simple_write_to_buffer
   single_open
   single_release
   skb_clone
@@ -5983,6 +5988,7 @@
   vabits_actual
   vfree
   vmalloc
+  vmalloc_to_page
   vm_map_ram
   vm_unmap_aliases
   vm_unmap_ram
@@ -6109,6 +6115,7 @@
   filemap_fdatawait_range
   filemap_fdatawrite_range
   full_name_hash
+  gen_pool_virt_to_phys
   generic_block_bmap
   generic_cont_expand_simple
   generic_fh_to_dentry
@@ -6476,6 +6483,7 @@
   up_write
   __usecs_to_jiffies
   vmf_insert_mixed
+  vmf_insert_pfn
   vm_get_page_prot
   vm_insert_page
   vsscanf
@@ -6561,6 +6569,7 @@
   clk_round_rate
   mmc_free_host
   mmc_of_parse
+  mmc_regulator_set_ocr
   mmc_regulator_set_vqmmc
   mmc_remove_host
   mmc_request_done
