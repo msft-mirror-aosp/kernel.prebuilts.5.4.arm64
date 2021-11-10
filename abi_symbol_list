@@ -5062,6 +5062,7 @@
   add_uevent_var
   add_wait_queue
   add_to_page_cache_lru
+  addrconf_prefix_rcv_add_addr
   aes_encrypt
   aes_expandkey
   alloc_anon_inode
@@ -5207,6 +5208,7 @@
   dev_fwnode
   dev_get_by_name
   dev_get_regmap
+  dev_open
   device_add
   device_connection_find_match
   device_create
@@ -5334,6 +5336,7 @@
   fwnode_property_present
   fwnode_property_read_string
   gen_pool_avail
+  gen_pool_fixed_alloc
   generic_end_io_acct
   generic_file_llseek
   generic_handle_irq
@@ -5457,6 +5460,7 @@
   ip_route_output_flow
   ipv4_redirect
   ipv4_update_pmtu
+  ipv6_skip_exthdr
   ir_lirc_scancode_event
   ir_raw_gen_manchester
   ir_raw_gen_pd
@@ -5601,6 +5605,7 @@
   of_property_read_string
   of_property_read_u32_index
   of_property_read_u64
+  of_property_read_u64_index
   of_property_read_variable_u32_array
   of_prop_next_string
   oops_in_progress
@@ -5745,6 +5750,7 @@
   regulator_map_voltage_linear
   regulator_set_voltage_sel_regmap
   release_firmware
+  __regmap_init_i2c
   remap_pfn_range
   remove_proc_entry
   remove_wait_queue
@@ -5772,6 +5778,7 @@
   seq_read
   set_nlink
   set_normalized_timespec64
+  set_page_dirty
   set_user_nice
   sg_init_table
   sg_miter_next
@@ -5786,6 +5793,7 @@
   simple_get_link
   simple_read_from_buffer
   simple_strtol
+  simple_write_to_buffer
   single_open
   single_release
   skb_clone
@@ -5981,6 +5989,7 @@
   vabits_actual
   vfree
   vmalloc
+  vmalloc_to_page
   vm_map_ram
   vm_unmap_aliases
   vm_unmap_ram
@@ -6044,6 +6053,7 @@
 # required by charger-manager.ko
   alarm_cancel
   alarm_expires_remaining
+  alarm_forward
   alarm_init
   alarm_start
   alarmtimer_get_rtcdev
@@ -6106,6 +6116,7 @@
   filemap_fdatawait_range
   filemap_fdatawrite_range
   full_name_hash
+  gen_pool_virt_to_phys
   generic_block_bmap
   generic_cont_expand_simple
   generic_fh_to_dentry
@@ -6200,6 +6211,7 @@
   dma_direct_unmap_sg
   idr_get_next
   sg_alloc_table
+  sg_alloc_table_from_pages
   sg_free_table
   vsprintf
 
@@ -6472,6 +6484,7 @@
   up_write
   __usecs_to_jiffies
   vmf_insert_mixed
+  vmf_insert_pfn
   vm_get_page_prot
   vm_insert_page
   vsscanf
@@ -6557,6 +6570,7 @@
   clk_round_rate
   mmc_free_host
   mmc_of_parse
+  mmc_regulator_set_ocr
   mmc_regulator_set_vqmmc
   mmc_remove_host
   mmc_request_done
