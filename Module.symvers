@@ -1619,6 +1619,7 @@
 0x196ac5d1	scsi_mode_sense	vmlinux	(unknown)	
 0x9044f44a	ns_capable_setid	vmlinux	(unknown)	
 0x8b676d40	devm_usb_get_phy	vmlinux	EXPORT_SYMBOL_GPL	
+0xbe76e0e8	__tracepoint_android_vh_ion_buffer_release	vmlinux	EXPORT_SYMBOL_GPL	
 0xd9a5ea54	__init_waitqueue_head	vmlinux	EXPORT_SYMBOL	
 0x2f8fd89d	xas_split_alloc	vmlinux	(unknown)	
 0x5a87b51d	nd_mapping_attribute_group	vmlinux	(unknown)	
