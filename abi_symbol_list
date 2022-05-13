@@ -5203,6 +5203,7 @@
   debugfs_create_file
   debugfs_create_regset32
   debugfs_create_u32
+  debugfs_create_u64
   debugfs_create_x32
   debugfs_initialized
   debugfs_remove
@@ -5215,6 +5216,7 @@
   del_timer_sync
   destroy_workqueue
   dev_driver_string
+  _dev_crit
   _dev_err
   dev_fwnode
   dev_get_by_name
@@ -5282,6 +5284,7 @@
   dma_direct_sync_single_for_cpu
   dma_direct_sync_single_for_device
   dma_direct_unmap_page
+  dma_fence_array_create
   dma_fence_release
   dma_fence_wait_timeout
   dma_free_attrs
@@ -5798,6 +5801,8 @@
   schedule_timeout
   schedule_timeout_interruptible
   scnprintf
+  seq_list_next
+  seq_list_start
   seq_lseek
   seq_printf
   seq_putc
@@ -6060,6 +6065,7 @@
   xt_unregister_matches
   xt_unregister_target
   xt_unregister_targets
+  yield
 
 # required by blk-mq-virtio.ko
   blk_mq_map_queues
@@ -6504,6 +6510,7 @@
   _raw_read_lock_bh
   _raw_read_unlock_bh
   _raw_write_lock_bh
+  _raw_read_trylock
   _raw_write_unlock_bh
   register_shrinker
   request_firmware
@@ -9933,6 +9940,7 @@
   ieee80211_scan_completed
   ieee80211_start_tx_ba_cb_irqsafe
   ieee80211_stop_tx_ba_cb_irqsafe
+  ieee80211_tx_prepare_skb
   ieee80211_tx_status_irqsafe
   ieee80211_unregister_hw
   init_net
@@ -10511,6 +10519,7 @@
 # required by virtio_pci.ko
   irq_set_affinity_hint
   pci_alloc_irq_vectors_affinity
+  pci_device_is_present
   pci_disable_sriov
   pci_enable_sriov
   pci_find_capability
@@ -10523,6 +10532,7 @@
   pci_release_selected_regions
   pci_request_selected_regions
   pci_vfs_assigned
+  virtio_break_device
   virtio_device_freeze
   virtio_device_restore
 
