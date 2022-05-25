@@ -5074,6 +5074,7 @@
   __alloc_pages_nodemask
   __alloc_percpu
   __alloc_skb
+  alloc_vm_area
   alloc_workqueue
   __arch_copy_from_user
   __arch_copy_in_user
@@ -5206,6 +5207,7 @@
   debugfs_create_u64
   debugfs_create_x32
   debugfs_initialized
+  debugfs_lookup
   debugfs_remove
   debugfs_remove_recursive
   debugfs_create_symlink
@@ -5957,6 +5959,7 @@
   unregister_filesystem
   unregister_chrdev_region
   unregister_pernet_subsys
+  unmap_kernel_range
   up
   usb_add_gadget_udc
   usb_alloc_coherent
@@ -6022,6 +6025,7 @@
   usleep_range
   vabits_actual
   vfree
+  verify_pkcs7_signature
   vmalloc
   vmalloc_to_page
   vm_map_ram
