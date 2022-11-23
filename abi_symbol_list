@@ -5258,6 +5258,8 @@
   __crypto_xor
   csum_ipv6_magic
   csum_partial
+  debugfs_attr_read
+  debugfs_attr_write
   debugfs_create_bool
   debugfs_create_dir
   debugfs_create_file
@@ -5693,6 +5695,7 @@
   of_device_is_available
   of_device_is_compatible
   of_dev_put
+  of_dma_is_coherent
   of_find_compatible_node
   of_find_device_by_node
   of_find_node_by_name
@@ -5730,6 +5733,7 @@
   page_endio
   page_get_link
   page_mapping
+  PageMovable
   panic
   param_ops_charp
   param_ops_uint
